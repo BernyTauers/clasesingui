@@ -1,26 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <header><h1>Awack</h1></header>
- <nav>
-    <ul>
-        <li>Index</li>
-        <li><a href = "pages/perfil.html">Perfil</a></li>
-        <li><a href="pages/tags.html">Tags</a></li>
-    </ul>
-</nav>
-<form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-  <input type = "button" value="login">
-</form>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Awack</title>
+
+  <style>
+    body {
+      background-color: #2f2f2f; /* gris oscuro */
+      color: rgb(0, 119, 0); /* verde */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #3a3a3a; /* gris navbar */
+    }
+
+    .navbar .nav-link {
+      color: #00e204; /* verde links */
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #2f2f2f; /* gris oscuro al hover */
+      background-color: #07df23; /* fondo verde al hover */
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .navbar-brand {
+      color: #07df23;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-label, .form-control, .btn {
+      color: #ffffff;
+      width: 300px;
+    }
+
+    .form-control {
+      background-color: #4a4a4a;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: #ffffff;
+      color: #2f2f2f;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #056514;
+    }
+  </style>
+
 </head>
+
 <body>
-    
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Awack</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/perfil.html">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tags.html">Tags</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <form>
+      <div class="mb-3">
+        <label for="fname" class="form-label">First name:</label>
+        <input type="text" class="form-control" id="fname" name="fname">
+      </div>
+      <div class="mb-3">
+        <label for="lname" class="form-label">Last name:</label>
+        <input type="text" class="form-control" id="lname" name="lname">
+      </div>
+      <button type="button" class="btn btn-primary">Login</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+
 </body>
 </html>
